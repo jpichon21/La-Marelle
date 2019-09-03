@@ -1,0 +1,94 @@
+@import '_include-media.scss';
+@import 'breakpoints.scss';
+
+// COLORS
+$color-lightblue: #e2eef1;
+$color-black: #3b4351;
+
+// VARIABLES 
+$leftmenu-width:  168px;
+$marelle-left : $leftmenu-width - 68px;
+
+
+// Setup
+
+a:hover, a:visited{
+    text-decoration: none;
+}
+
+
+// Containers
+
+body{
+    background-color: $color-lightblue;
+}
+
+#bodyContainer{
+    position: relative;
+    margin: 36px 56px;
+    height: 92vh;
+}
+
+#leftMenuContainer{
+    float:left;
+    width: $leftmenu-width;
+    height: 92vh;
+    background-color: $color-lightblue;
+    #menuList{
+        margin-top: 33%;
+        cursor: pointer;
+        .accordion{
+        label{
+           cursor: pointer;
+        }
+        }
+        .accordion-header{
+            //border-bottom: 1px solid $color-black;
+            font-weight: 600;
+            font-size: 18px;
+            padding-left: 0px;
+            i{
+                right: 0;
+            }
+        }
+        .accordion-body a{
+            font-size: 14px;
+            color:  $color-black;
+        }
+    }
+    #menuMentions{
+        width: 136px;
+        position: absolute;
+        bottom: 0px;
+        h3{
+            font-size: 14px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+}
+
+#gameContainer{
+    background-image: url(../img/bg.jpg);
+    width: 100%;
+    height: 92vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    #marelleContainer{
+        margin: 0 auto;
+        width: 23.5%;
+        height: 100%;
+       #marelle{
+        margin-top: 8%;
+        padding-left: $marelle-left;
+       }
+    }
+}
+
+
+// Modals
+
+.modal.modal-lg .modal-overlay {
+    background: #e2eef194;
+}
