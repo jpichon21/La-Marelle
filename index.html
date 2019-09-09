@@ -13,7 +13,8 @@
     <link rel="stylesheet" type='text/css' media='screen' href="css/spectre-icons.min.css">
 
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
-    <script src='main.js'></script>
+    <script src='js/jquery-3.4.1.min.js'></script>
+    <script src='js/main.js'></script>
 </head>
 <body>
 
@@ -24,9 +25,11 @@
         <div id="leftMenuContainer">
             <nav>
                 <div id="menuIconContainer">
-                   <a href="#"><img src="img/menu_burger.svg" width="32px"></a>
+                   <a href="#" id="menuToggle"><img src="img/menu_burger.svg" width="32px"></a>
                 </div>
 
+              <!--menu container-->
+              <div id="mainMenu">
                 <div id="menuList">
                         <div class="accordion">
                                 <input onclick="document.getElementById('listSound').play();" type="checkbox" id="accordion-1" name="accordion-checkbox"  hidden>
@@ -61,15 +64,16 @@
                 </div>
 
                 <div id="menuMentions">
-                    <div id="textContent">
+                    <div class="textContent">
                       <h3>Petit texte explicatif sur le but de ce site.</h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum id urna auctor posuere. Praesent luctus urna ac magna scelerisque, a porta urna vulputate.Sed sit amet nulla nunc. Morbi lobortis scelerisque leo in accumsan. Mauris tristique nunc mi, vitae pulvinar magna interdum vel. In hac habitasse platea dictumst.</p>
                     </div>
-                    <div id="logosContent">
+                    <div class="logosContent">
                         <img src="img/logo_region.svg" width="64px">
                         <img src="img/logo_ministere_culture_noir.png" width="64px">
                     </div>
                 </div>
+              </div>
             </nav>
         
         
@@ -261,6 +265,19 @@
                     <audio id="listSound">
                         <source src="sounds/GUI_Notification 09.wav" type="audio/wav">
                     </audio>
+
+                    <footer>
+                      <div id="mobileMentions">
+                                 <div class="textContent">
+                                   <h3>Petit texte explicatif sur le but de ce site.</h3>
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum id urna auctor posuere. Praesent luctus urna ac magna scelerisque, a porta urna vulputate.Sed sit amet nulla nunc. Morbi lobortis scelerisque leo in accumsan. Mauris tristique nunc mi, vitae pulvinar magna interdum vel. In hac habitasse platea dictumst.</p>
+                                 </div>
+                                 <div class="logosContent">
+                                     <img src="img/logo_region.svg" width="64px">
+                                     <img src="img/logo_ministere_culture_noir.png" width="64px">
+                                 </div>
+                             </div>
+                   </footer>
                 
 </body>
 </html>
