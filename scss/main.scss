@@ -3,24 +3,60 @@
 
 // COLORS
 $color-lightblue: #e2eef1;
-$color-black: #3b4351;
+$color-black: #5d5d5d;
+$color-bluegrey: #496A73;
 
 // VARIABLES 
 $leftmenu-width:  168px;
 $marelle-left : $leftmenu-width - 68px;
 $mobile-padding: 18px;
 
+// SHADOWS 
+$shadow-lv2: 0 10px 20px rgba(0, 0, 0, 0.19),
+0 6px 6px rgba(0, 0, 0, 0.23);
+$shadow-lv1: 0 1px 3px rgba(0, 0, 0, 0.12),
+0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow-lv4: 0 14px 28px rgba(0, 0, 0, 0.25),
+0 10px 10px rgba(0, 0, 0, 0.22);
+$shadow-lv3: 0 10px 20px rgba(0, 0, 0, 0.19),
+0 6px 6px rgba(0, 0, 0, 0.23);
+
+// FONTS
+@font-face {
+    font-family: 'Pequena';
+    src: url('../fonts/Pequena.otf') format('otf');
+    src: url('../fonts/Pequena.woff') format('woff');
+    src: url('../fonts/Pequena.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2{
+    font-size: 1rem;
+}
+
+h3{
+    font-size: 0.9rem;
+}
+
+h4{
+    font-size: 0.7rem;
+}
 
 // Setup
-
 a:hover, a:visited{
     text-decoration: none;
+}
+
+.visible{
+    display: inline-block!important;
 }
 
 
 // Containers
 
 body{
+    zoom : 100%!important;
     background-color: $color-lightblue;
     overflow: hidden;
     @include media('<=small') {
@@ -32,7 +68,9 @@ footer{
     padding: $mobile-padding;
     margin-top: 64px;
     h3{
-        font-size: 1.0rem
+        font-size: 1.0rem;
+        font-family:'Pequena'!important;
+        font-weight: 200;
     }
     p{
         font-size: 0.6rem;
@@ -56,6 +94,9 @@ footer{
     width: $leftmenu-width;
     height: 92vh;
     background-color: $color-lightblue;
+    @include media('<=xxlarge') {
+        width: 208px;
+    }
     @include media('<=small') {
         float: none;
         display: inline-block;
@@ -63,24 +104,35 @@ footer{
         padding: $mobile-padding;
         width: 100%;
     }
+    #mainMenu{
+        @include media('<=small') {
+            display: none;
+        }
+    }
     #menuToggle{
+        img{
+            outline:none;
+        }
         @include media('>small') {
             display: none;
         }
     }
     #menuList{
         cursor: pointer;
+        padding: 12px 0px;
         @include media('<=small') {
                 margin: 0px;
         }
         .accordion{
-        label{
-           cursor: pointer;
-        }
+            label{
+            cursor: pointer;
+            font-family: 'Pequena';
+            text-decoration: underline;
+            }
         }
         .accordion-header{
-            font-weight: 600;
-            font-size: 18px;
+            font-weight: 400;
+            font-size: 1rem;
             padding-left: 0px;
             i{
                 right: 0;
@@ -96,11 +148,19 @@ footer{
         position: absolute;
         bottom: 0px;
         display: inline-block;
+        @include media('<xxlarge') {
+            width: 179px;
+        }
         @include media('<=small') {
             display: none;
         }
-        h3{
-            font-size: 14px;
+        .textContent{
+            h3{
+                //font-size: 14px;
+                font-size: 0.7rem;
+                font-family: 'Pequena'!important;
+                font-weight: 200;
+            }
         }
         p{
             font-size: 12px;
@@ -108,12 +168,43 @@ footer{
     }
 }
 
-#gameContainer{
-    background-image: url(../img/bg.jpg);
+#backgroundContainer, #layer1container, #layer2container, #layer3container{
     width: 100%;
     height: 92vh;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+#backgroundContainer{
+    background-image: url(../img/bg.jpg);
+}
+
+#layer1container{
+    background-image: url(../img/backgrounds/losanges_cercles_3.svg);
+    background-position: 0px;
+}
+
+#layer2container{
+    background-image:  url(../img//backgrounds/clouds.svg) ;
+}
+
+#layer3container{
+    background-image:  url(../img//backgrounds/cercles.svg) ;
+    background-position: 0px;
+}
+
+#gameContainer{
+    background-image: url(../img//backgrounds/foreground_2.svg);
+    width: 100%;
+    height: 92vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    #content{
+
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     #marelleContainer{
         margin: 0 auto;
         width: 23.5%;
@@ -135,9 +226,133 @@ footer{
     }
 }
 
+//mobile BG
+#gameContainer, #layer1container, #layer2container, #layer3container{
+    @include media('<=small') {
+        background: none;
+    }
+}
+
 
 // Modals
 
 .modal.modal-lg .modal-overlay {
     background: #e2eef194;
+}
+
+.modal-title.h5{
+    font-family: 'Pequena'!important;
+    font-weight: 200;
+    font-size: 1.4rem;
+}
+
+aside{
+    float: right;
+    width:20%;
+    min-height: 300px;
+    border-left: 1px solid #e8e8e8;
+    padding-left: 18px;
+    margin-left: 18px;
+    p{
+        margin: 0px 0px 0.3rem 0px;
+    }
+    p, a{
+        font-size: 0.6rem;
+    }
+    div{
+        margin: 1rem 0rem;
+    }
+    i,svg{
+        display: inline;
+    }
+}
+
+
+
+///BACKOFFICE
+html, body{
+    background: $color-lightblue;
+}
+
+#loginPageContainer{
+    #loginContainer{
+        border: 1px solid rgb(199, 199, 199);
+        max-width: 400px;
+        margin-top: 20vh;
+        background-color: #fafafa;
+        padding: 40px;
+        border-radius: 3px;
+        border: 1px solid #e8e8e8;
+        min-height: 400px;
+        .error-msg{
+            text-align: center;
+        }
+        input{
+            margin: 6px 0px;
+        }
+
+        .btn{
+            width: 100%;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+    }
+    #contentContainer{
+        max-width: 800px;
+        margin-top: 20vh;
+        padding: 40px;
+        border-radius: 10px;
+        input{
+            margin: 12px 0px;
+        }
+
+        .btn{
+            float:right;
+        }
+        .return{
+            float:left;
+            padding: 16px;
+            outline: none;
+        }
+        .return:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+#adminPageContainer{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20vh;
+}
+
+
+.navbar{
+    background-color: $color-bluegrey;
+    padding: 10px;
+    .btn.btn-link, .btn.btn-link:hover, a, a:hover, a:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+    i{
+        margin: 0px 12px;
+    }
+}
+
+.accordion i, .accordion-header{
+    cursor: pointer;
+}
+
+.accordion-body{
+    margin: 12px;
+    i{
+        margin-right: 12px;
+    }
+    a{
+        padding: 12px;
+        margin-left: 24px;
+        outline: none;
+    }
 }
