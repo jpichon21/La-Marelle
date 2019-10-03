@@ -80,6 +80,10 @@ footer{
     }
 }
 
+a, a:hover, a:active, a:visited {
+    color: $color-bluegrey;
+}
+
 #bodyContainer{
     position: relative;
     margin: 36px 56px;
@@ -239,11 +243,21 @@ footer{
 .modal.modal-lg .modal-overlay {
     background: #e2eef194;
 }
-
+.modal-container, .modal-header{
+    padding: 0.8rem 0.8rem 0rem 0.8rem!important;
+}
+.modal-body{
+    padding: 0rem 0.8rem 1.2rem 0.8rem!important;
+}
 .modal-title.h5{
     font-family: 'Pequena'!important;
     font-weight: 200;
     font-size: 1.4rem;
+    p{
+        font-family: 'Pequena'!important;
+        font-weight: 200;
+        font-size: 1.4rem;
+    }
 }
 
 aside{
@@ -272,6 +286,12 @@ aside{
 ///BACKOFFICE
 html, body{
     background: $color-lightblue;
+    overflow: auto;
+}
+
+.form-input:focus {
+    border-color: $color-bluegrey;
+    box-shadow: none;
 }
 
 #loginPageContainer{
@@ -301,7 +321,7 @@ html, body{
     }
     #contentContainer{
         max-width: 800px;
-        margin-top: 20vh;
+        margin-top: 8vh;
         padding: 40px;
         border-radius: 10px;
         input{
@@ -320,16 +340,30 @@ html, body{
             text-decoration: none;
         }
     }
+
+    .btn.btn-primary {
+        background: $color-bluegrey;
+        border-color:  $color-bluegrey;
+        color: #fff;
+    }
 }
 
 #adminPageContainer{
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 20vh;
+    margin-top: 10vh;
+    overflow: auto;
+    padding: 2%;
+    a, a:hover, a:active, a:visited {
+        color: $color-bluegrey;
+    }
 }
 
 
 .navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     background-color: $color-bluegrey;
     padding: 10px;
     .btn.btn-link, .btn.btn-link:hover, a, a:hover, a:visited {
@@ -355,4 +389,22 @@ html, body{
         margin-left: 24px;
         outline: none;
     }
+}
+
+
+//QILL
+.ql-hidden{
+    display: none;
+}
+
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+    max-height: 680px;
+}
+
+.ql-toolbar.ql-snow {
+    background-color: #f1f1f1;
+}
+
+.column {
+    padding: 0px;
 }

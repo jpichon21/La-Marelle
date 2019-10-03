@@ -5,7 +5,7 @@ include_once '../components/connection.php';
 if (isset($_SESSION['logged_in'])) {
     if (isset($_POST['upload'])) {
         //chemin de sauvegarde
-        $target = "../docs/pdf".basename($_FILES['pdf']['name']);
+        $target ="../docs/".basename($_FILES['pdf']['name']);
 
         $pdf= $_FILES['pdf']['name'];
         $case = $_POST['case'];

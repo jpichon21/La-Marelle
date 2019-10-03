@@ -108,14 +108,14 @@
       </div>
 
       <!--Modals-->
-      <?php include 'components/modals/modal1.php';?>
-      <?php include 'components/modals/modal2.php';?>
-      <?php include 'components/modals/modal3.php';?>
-      <?php include 'components/modals/modal4.php';?>
-      <?php include 'components/modals/modal5.php';?>
-      <?php include 'components/modals/modal6.php';?>
-      <?php include 'components/modals/modal7.php';?>
-      <?php include 'components/modals/modal8.php';?>
+      <?php include 'components/modal1.php';?>
+      <?php include 'components/modal2.php';?>
+      <?php include 'components/modal3.php';?>
+      <?php include 'components/modal4.php';?>
+      <?php include 'components/modal5.php';?>
+      <?php include 'components/modal6.php';?>
+      <?php include 'components/modal7.php';?>
+      <?php include 'components/modal8.php';?>
 
       <!-- AUDIO -->
       <audio id="beepSound">

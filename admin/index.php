@@ -18,7 +18,7 @@ if (isset($_SESSION['logged_in'])){
     <?php include 'header.php'; ?>
 
     <div id="adminPageContainer">
-    <h1>Bienvenue sur l'Interface Gestion des Contenus </h1>
+    <h1>Bienvenue sur l'Interface de Gestion des Contenus </h1>
 
         <div class="accordion">
         <input type="checkbox" id="accordion-0" name="accordion-checkbox" hidden>
@@ -30,8 +30,53 @@ if (isset($_SESSION['logged_in'])){
                 <a href="addPDF.php"><i class="icon icon-plus"></i>Ajouter une fiche pédagogique</a>
             </div>
             <div class="accordion-body">
-                <a href="editBioEN.php"><i class="icon icon-plus"></i>Supprimer une fiche pédagogique</a>
+                <a href="editBioEN.php"><i class="icon icon-delete"></i>Supprimer une fiche pédagogique</a>
             </div>
+        </div>
+
+        <div class="accordion">
+        <input type="checkbox" id="accordion-2" name="accordion-checkbox" hidden>
+            <label class="accordion-header" for="accordion-2">
+                <i class="icon icon-arrow-right mr-1"></i>
+                Gérer les bibliographies
+            </label>
+            <div class="accordion-body">
+                <a href="addBiblio.php"><i class="icon icon-plus"></i>Ajouter une bibliographie</a>
+            </div>
+        </div>
+
+
+        <div class="accordion">
+        <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>
+            <label class="accordion-header" for="accordion-1">
+                <i class="icon icon-arrow-right mr-1"></i>
+                Gérer les cases
+            </label>
+            <div class="accordion-body">
+                <a href="editCase1.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 1</a>
+            </div>
+            <div class="accordion-body">
+                <a href="editCase2.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 2</a>
+            </div>
+            <div class="accordion-body">
+                <a href="editCase3.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 3</a>
+            </div>
+            <div class="accordion-body">
+                <a href="editCase4.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 4</a>
+            </div>
+            <div class="accordion-body">
+                <a href="editCase5.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 5</a>
+            </div>
+            <div class="accordion-body">
+                <a href="editCase6.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 6</a>
+            </div>
+            <div class="accordion-body">
+                <a href="editCase7.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 7</a>
+            </div>
+            <div class="accordion-body">
+                <a href="editCase8.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 8</a>
+            </div>
+
         </div>
 
     </div>
@@ -70,9 +115,9 @@ if (isset($_SESSION['logged_in'])){
     <html>
     <head>
         <title>La Marelle Voix | Interface Gestion</title>
-        <link rel="stylesheet" href="../css/spectre/spectre.min.css"/>
-        <link rel="stylesheet" href="../css/spectre/spectre-exp.min.css"/>
-        <link rel="stylesheet" href="../css/spectre/spectre-icons.min.css"/>
+        <link rel="stylesheet" href="../css/spectre.min.css"/>
+        <link rel="stylesheet" href="../css/spectre-exp.min.css"/>
+        <link rel="stylesheet" href="../css/spectre-icons.min.css"/>
         <link rel="stylesheet" href="../css/main.css"/>
     </head>
     <body>
