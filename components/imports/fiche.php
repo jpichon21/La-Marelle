@@ -1,9 +1,10 @@
 <?php
 
 class Fiche{
-    public function fetch_all() {
+    public function fetch_all($case_number) {
         global $pdo;
-        $query = $pdo->prepare("SELECT * FROM pdfdocs");
+        $pdo->query('SET NAMES utf8');
+        $query = $pdo->prepare("SELECT * FROM pdfdocs WHERE pdf_case = ".$case_number.";");
         $query->execute();
 
         return $query->fetchAll();

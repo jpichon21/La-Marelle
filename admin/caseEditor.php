@@ -1,5 +1,11 @@
 
 <?php
+session_start();
+include_once '../components/connection.php';
+include_once '../components/imports/case.php';
+$case = new Contenu;
+$cases = $case->fetch_all($case_number);
+
 if (isset($_SESSION['logged_in'])) {
     if (isset($_POST['content'])) {
         $content = $_POST['content'];

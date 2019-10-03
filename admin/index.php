@@ -45,6 +45,17 @@ if (isset($_SESSION['logged_in'])){
             </div>
         </div>
 
+        <div class="accordion">
+        <input type="checkbox" id="accordion-3" name="accordion-checkbox" hidden>
+            <label class="accordion-header" for="accordion-3">
+                <i class="icon icon-arrow-right mr-1"></i>
+                Gérer les sites ressources
+            </label>
+            <div class="accordion-body">
+                <a href="addSite.php"><i class="icon icon-plus"></i>Ajouter un site ressource</a>
+            </div>
+        </div>
+
 
         <div class="accordion">
         <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>

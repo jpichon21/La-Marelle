@@ -1,9 +1,4 @@
 <?php 
-session_start();
-include_once '../components/connection.php';
-include_once '../components/imports/case2.php';
-
-$case = new Contenu2;
-$cases = $case->fetch_all();
+$case_number = 2;
 ?>
 <?php include 'caseEditor.php'; ?>
