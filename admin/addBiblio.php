@@ -51,12 +51,12 @@ if (isset($_SESSION['logged_in'])) {
             <?php } ?>
             
             <div class="container" id="contentContainer">
-            <h2>Ajouter une bibliographie</h2>
+            <h2>Ajouter une oeuvre</h2>
                 <div class="form-group column col-md-10 ">
                     <form action="addBiblio.php" method="post" autocomplete="on" id="editForm">
 
                         <label for="case">Case n°</label>
-                            <select class="form-input" name="case">
+                            <select class="form-input w33" name="case">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -78,10 +78,10 @@ if (isset($_SESSION['logged_in'])) {
                         <input type="text" class="form-input" name="editor">
 
                         <label for="year">Année</label>
-                        <input type="text" class="form-input" name="year" maxlength="4">
+                        <input type="text" class="form-input w33" name="year" maxlength="4">
 
                         <label for="pages">Pages</label>
-                        <input type="text" class="form-input" name="pages" maxlength="4">
+                        <input type="text" class="form-input w33" name="pages" maxlength="4">
 
                         <label for="link">Lien externe</label>
                         <input type="text" class="form-input" name="link">

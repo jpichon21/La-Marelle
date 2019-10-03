@@ -18,8 +18,9 @@ if (isset($_SESSION['logged_in'])){
     <?php include 'header.php'; ?>
 
     <div id="adminPageContainer">
-    <h1>Bienvenue sur l'Interface de Gestion des Contenus </h1>
+    <h1>Bienvenue sur l'interface de gestion des contenus </h1>
 
+    <h2>Gestion des ressources associées</h2>
         <div class="accordion">
         <input type="checkbox" id="accordion-0" name="accordion-checkbox" hidden>
             <label class="accordion-header" for="accordion-0">
@@ -30,7 +31,7 @@ if (isset($_SESSION['logged_in'])){
                 <a href="addPDF.php"><i class="icon icon-plus"></i>Ajouter une fiche pédagogique</a>
             </div>
             <div class="accordion-body">
-                <a href="editBioEN.php"><i class="icon icon-delete"></i>Supprimer une fiche pédagogique</a>
+                <a href="deletePDF.php"><i class="icon icon-delete"></i>Supprimer une fiche pédagogique</a>
             </div>
         </div>
 
@@ -41,7 +42,10 @@ if (isset($_SESSION['logged_in'])){
                 Gérer les bibliographies
             </label>
             <div class="accordion-body">
-                <a href="addBiblio.php"><i class="icon icon-plus"></i>Ajouter une bibliographie</a>
+                <a href="addBiblio.php"><i class="icon icon-plus"></i>Ajouter une oeuvre</a>
+            </div>
+            <div class="accordion-body">
+                <a href="deleteBiblio.php"><i class="icon icon-delete"></i>Supprimer une oeuvre</a>
             </div>
         </div>
 
@@ -54,9 +58,12 @@ if (isset($_SESSION['logged_in'])){
             <div class="accordion-body">
                 <a href="addSite.php"><i class="icon icon-plus"></i>Ajouter un site ressource</a>
             </div>
+            <div class="accordion-body">
+                <a href="deleteSite.php"><i class="icon icon-delete"></i>Supprimer un site ressource</a>
+            </div>
         </div>
 
-
+        <h2>Gestion des contenus éditoriaux</h2>
         <div class="accordion">
         <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>
             <label class="accordion-header" for="accordion-1">

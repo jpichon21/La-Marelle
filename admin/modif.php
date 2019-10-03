@@ -15,19 +15,7 @@ if (isset($_SESSION['logged_in'])) {
         </head>
         <body>
 
-        <header class="navbar">
-        <section class="navbar-section">
-            <a href="index.php" class="btn btn-link">Accueil</a>
-            <a href="../index.php" class="btn btn-link">Retour au site</a>
-        </section>
-        <section class="navbar-center">
-            <!-- centered logo or brand -->
-        </section>
-        <section class="navbar-section">
-        <a href="logout.php">Déconnexion</a>
-        
-        </section>
-        </header>
+        <?php include 'header.php'; ?>
 
         <div id="loginPageContainer">
             

@@ -3,8 +3,10 @@
 session_start();
 include_once '../components/connection.php';
 include_once '../components/imports/case.php';
+
 $case = new Contenu;
 $cases = $case->fetch_all($case_number);
+
 
 if (isset($_SESSION['logged_in'])) {
     if (isset($_POST['content'])) {
@@ -14,9 +16,9 @@ if (isset($_SESSION['logged_in'])) {
             $error = "Tous les champs sont requis !";
         } else {
             $pdo->query('SET NAMES utf8');
-            $query1 = $pdo->prepare("UPDATE cases SET case_content = '$content' ");
+            $query1 = $pdo->prepare("UPDATE cases SET case_content = '$content' WHERE case_number = '$case_number' ");
             $query1->bindValue(1, $content);
-            $query2 = $pdo->prepare("UPDATE cases SET case_title = '$title' ");
+            $query2 = $pdo->prepare("UPDATE cases SET case_title = '$title'  WHERE case_number = '$case_number' ");
             $query2->bindValue(1, $title);
             $query1->execute();
             $query2->execute();
@@ -47,9 +49,9 @@ if (isset($_SESSION['logged_in'])) {
             <?php } ?>
             
             <div class="container" id="contentContainer">
-            <h2>Modifier le contenu d'une case</h2>
+            <h2>Modifier le contenu de la case <?php echo "$case_number" ?></h2>
                 <div class="form-group column col-md-10 ">
-                    <form action="editCase1.php" method="post"  autocomplete="off" id="editForm">
+                    <form action="editCase<?php echo "$case_number" ?>.php" method="post"  autocomplete="off" id="editForm">
                     <?php foreach ($cases as $case) { ?>
                         <label for="title">Titre de la case</label>
                         <input type="text" class="form-input" name="title" value="<?php echo $case['case_title']; ?>">
