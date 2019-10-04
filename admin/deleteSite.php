@@ -23,6 +23,9 @@ if (isset($_SESSION['logged_in'])) {
         <html>
         <head>
             <title>La Marelle Voix | Interface Gestion</title>
+            <meta charset='utf-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1'>
+            <link rel="icon" href="../img/favicon.png" />
             <link rel="stylesheet" href="../css/spectre.min.css"/>
             <link rel="stylesheet" href="../css/spectre-exp.min.css"/>
             <link rel="stylesheet" href="../css/spectre-icons.min.css"/>
@@ -41,7 +44,7 @@ if (isset($_SESSION['logged_in'])) {
             <h2>Sélectionnez un site à supprimer :</h2>
 
             <?php if (isset($success)) { ?>
-                <p style="color:green;"><?php echo $success; ?></p>
+                <p style="color:green;" class="admin-msg"><?php echo $success; ?></p>
             <?php } ?>
 
                 <div class="form-group column col-md-10 ">

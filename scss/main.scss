@@ -6,6 +6,7 @@ $color-lightblue: #e2eef1;
 $color-black: #5d5d5d;
 $color-bluegrey: #609bab;
 $color-ligherblue: #78b8ca;
+$color-slateblue: #316775;
 
 // VARIABLES 
 $leftmenu-width:  168px;
@@ -244,6 +245,8 @@ a, a:hover, a:active, a:visited {
 .modal.modal-lg .modal-overlay {
     background: #e2eef194;
 }
+
+
 .modal-container, .modal-header{
     padding: 0.8rem 0.8rem 0rem 0.8rem!important;
 }
@@ -333,6 +336,9 @@ html, body{
     box-shadow: none;
 }
 
+.admin-msg{
+    margin: 18px 0px;
+}
 #loginPageContainer{
     #loginContainer{
         border: 1px solid rgb(199, 199, 199);
@@ -381,8 +387,8 @@ html, body{
     }
 
     .btn.btn-primary {
-        background: $color-bluegrey;
-        border-color:  $color-bluegrey;
+        background: $color-slateblue;
+        border-color:  $color-slateblue;
         color: #fff;
     }
 }
@@ -393,6 +399,10 @@ html, body{
     margin-top: 4vw;
     overflow: auto;
     padding: 2%;
+    h1{
+        font-size: 1.6rem;
+        margin-bottom: 36px;
+    }
     h2 {
         padding: 16px;
     }
@@ -406,7 +416,7 @@ html, body{
     position: fixed;
     width: 100%;
     z-index: 10;
-    background-color: $color-bluegrey;
+    background-color: $color-slateblue;
     padding: 10px 22px;
     .btn.btn-link, .btn.btn-link:hover, a, a:hover, a:visited {
         color: #fff;

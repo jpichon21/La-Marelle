@@ -27,6 +27,9 @@ if (isset($_SESSION['logged_in'])) {
     <html>
         <head>
             <title>La Marelle Voix | Interface Gestion</title>
+            <meta charset='utf-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1'>
+            <link rel="icon" href="../img/favicon.png" />
             <link rel="stylesheet" href="../css/spectre.min.css"/>
             <link rel="stylesheet" href="../css/spectre-exp.min.css"/>
             <link rel="stylesheet" href="../css/spectre-icons.min.css"/>
@@ -43,7 +46,7 @@ if (isset($_SESSION['logged_in'])) {
             <?php } ?>
             
             <div class="container" id="contentContainer">
-            <h2>Ajouter une Fiche Pédagogique</h2>
+            <h2>Ajouter une fiche pédagogique :</h2>
                 <div class="form-group column col-md-10 ">
                     <form action="addPDF.php" method="post"  enctype="multipart/form-data">
                         <input type="hidden" name="size" value="1000000">

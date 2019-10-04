@@ -8,6 +8,9 @@ if (isset($_SESSION['logged_in'])){
     <html>
     <head>
         <title>La Marelle Voix | Interface Gestion</title>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="icon" href="../img/favicon.png" />
         <link rel="stylesheet" href="../css/spectre.min.css"/>
         <link rel="stylesheet" href="../css/spectre-exp.min.css"/>
         <link rel="stylesheet" href="../css/spectre-icons.min.css"/>
@@ -18,7 +21,7 @@ if (isset($_SESSION['logged_in'])){
     <?php include 'header.php'; ?>
 
     <div id="adminPageContainer">
-    <h1>Bienvenue sur l'interface de gestion des contenus </h1>
+    <h1>Bienvenue sur l'interface de gestion de La Marelle </h1>
 
     <h2>Gestion des ressources associées</h2>
         <div class="accordion">

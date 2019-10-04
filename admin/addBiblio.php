@@ -35,6 +35,9 @@ if (isset($_SESSION['logged_in'])) {
     <html>
         <head>
             <title>La Marelle Voix | Interface Gestion</title>
+            <meta charset='utf-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1'>
+            <link rel="icon" href="../img/favicon.png" />
             <link rel="stylesheet" href="../css/spectre.min.css"/>
             <link rel="stylesheet" href="../css/spectre-exp.min.css"/>
             <link rel="stylesheet" href="../css/spectre-icons.min.css"/>
@@ -51,7 +54,7 @@ if (isset($_SESSION['logged_in'])) {
             <?php } ?>
             
             <div class="container" id="contentContainer">
-            <h2>Ajouter une oeuvre</h2>
+            <h2>Ajouter une oeuvre :</h2>
                 <div class="form-group column col-md-10 ">
                     <form action="addBiblio.php" method="post" autocomplete="on" id="editForm">
 

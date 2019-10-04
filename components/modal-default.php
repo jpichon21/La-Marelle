@@ -53,7 +53,7 @@
                         <h4>Sites</h4>
                         <?php foreach ($sites as $site) { ?>
                         <li>
-                            <a href="docs/<?php echo $site['site_url'];?>"><i class="fas fa-globe"></i> <?php echo $site['site_name'];?></a>
+                            <a href="https://<?php echo $site['site_url'];?>"><i class="fas fa-globe"></i> <?php echo $site['site_name'];?></a>
                         </li>
                         <?php } ?>
                     </div>

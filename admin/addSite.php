@@ -27,6 +27,9 @@ if (isset($_SESSION['logged_in'])) {
     <html>
         <head>
             <title>La Marelle Voix | Interface Gestion</title>
+            <meta charset='utf-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1'>
+            <link rel="icon" href="../img/favicon.png" />
             <link rel="stylesheet" href="../css/spectre.min.css"/>
             <link rel="stylesheet" href="../css/spectre-exp.min.css"/>
             <link rel="stylesheet" href="../css/spectre-icons.min.css"/>
@@ -43,7 +46,7 @@ if (isset($_SESSION['logged_in'])) {
             <?php } ?>
             
             <div class="container" id="contentContainer">
-            <h2>Ajouter un site ressource</h2>
+            <h2>Ajouter un site ressource :</h2>
                 <div class="form-group column col-md-10 ">
                     <form action="addSite.php" method="post" autocomplete="on" id="editForm">
 
@@ -62,7 +65,7 @@ if (isset($_SESSION['logged_in'])) {
                         <label for="name" class="w100">Nom du site</label>
                         <input type="text" class="form-input" name="name" >
 
-                        <label for="url">Lien du site</label>
+                        <label for="url">Lien du site <i>(format www.monsite.com)</i></label>
                         <input type="text" class="form-input" name="url" >
                     
                         <input class="btn btn-primary input-group-btn" type="submit" value="Ajouter" id="sendBtn"/>
