@@ -19,6 +19,12 @@
   <script src='js/jquery-3.4.1.min.js'></script>
   <script src='js/main.js'></script>
   <script src='js/parallaxe.js'></script>
+  <script>
+    $(document).ready(function () {
+      $('.ql-editor').prop('contenteditable', false );
+      $('.ql-clipboard').prop('contenteditable', false );
+    });
+  </script>
 </head>
 
 <body>

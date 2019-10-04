@@ -1,7 +1,9 @@
 <div class="modal modal-lg" id="modal<?php echo $case_number;?>">
     <a onclick="document.getElementById('closeSound').play();" href="#close" class="modal-overlay"
         aria-label="Close"></a>
-    <div class="modal-container">
+    <div class="modal-container" >
+
+
         <div class="modal-header">
             <a onclick="document.getElementById('closeSound').play();" href="#close" class="btn btn-clear float-right"
                 aria-label="Close"></a>
@@ -12,11 +14,11 @@
             </div>
         </div>
         <div class="modal-body">
-            <div class="content">
+            <div class="content" >
             <!--encart droit-->
             <?php if (!empty($bibs) || !empty($sites) || !empty($fiches)) { ?>
                 <aside>
-                    <h3>Ressources</h3>
+                    <h3>Ressources Associées</h3>
                     <!--Bibliographie -->
                     <?php if (!empty($bibs)) { ?>
                     <div>
@@ -67,8 +69,10 @@
 
             </div>
         </div>
+            
         <div class="modal-footer">
         </div>
+   
     </div>
 </div>
 </div>

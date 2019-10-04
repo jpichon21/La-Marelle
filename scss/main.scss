@@ -249,6 +249,12 @@ a, a:hover, a:active, a:visited {
 .modal-body{
     padding: 0rem 0.8rem 1.2rem 0.8rem!important;
 }
+
+.modal-container .modal-body {
+    width: 102%;
+    padding-right: 2%!important;
+}
+
 .modal-title.h5{
     font-family: 'Pequena'!important;
     font-weight: 200;
@@ -266,6 +272,7 @@ a, a:hover, a:active, a:visited {
         max-width: 93.8vw;
         max-height: 94vh;
         height: 94vh;
+        overflow-x: hidden;
     }
     transition: 1s ease;
 }
@@ -273,11 +280,11 @@ a, a:hover, a:active, a:visited {
 
 aside{
     float: right;
-    width:20%;
-    min-height: 300px;
+    width: 20%;
+    min-height: 1000px;
     border-left: 1px solid #e8e8e8;
     padding-left: 18px;
-    margin-left: 18px;
+    margin-left: 36px;
     li{
         list-style-type: none;
     }
@@ -430,6 +437,13 @@ select{
 }
 
 //QILL
+.ql-video{
+    width: 640px;
+    height: 360px;
+}
+.ql-editor{
+    outline: none;
+}
 .ql-hidden{
     display: none;
 }
