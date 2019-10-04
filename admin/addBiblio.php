@@ -56,7 +56,7 @@ if (isset($_SESSION['logged_in'])) {
                     <form action="addBiblio.php" method="post" autocomplete="on" id="editForm">
 
                         <label for="case">Case n°</label>
-                            <select class="form-input w33" name="case">
+                            <select class="form-input w8" name="case">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -68,19 +68,19 @@ if (isset($_SESSION['logged_in'])) {
                                 <option value="9">9</option>
                             </select>
 
-                        <label for="author">Auteurs</label>
+                        <label for="author" class="w100">Auteur(s)</label>
                         <input type="text" class="form-input" name="author" >
 
-                        <label for="book">Ouvrage</label>
+                        <label for="book">Nom de l'ouvrage</label>
                         <input type="text" class="form-input" name="book" >
 
                         <label for="editor">Éditeur</label>
                         <input type="text" class="form-input" name="editor">
 
-                        <label for="year">Année</label>
+                        <label for="year">Année d'édition</label>
                         <input type="text" class="form-input w33" name="year" maxlength="4">
 
-                        <label for="pages">Pages</label>
+                        <label for="pages">Nombre de pages</label>
                         <input type="text" class="form-input w33" name="pages" maxlength="4">
 
                         <label for="link">Lien externe</label>

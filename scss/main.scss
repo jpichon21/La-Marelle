@@ -260,6 +260,17 @@ a, a:hover, a:active, a:visited {
     }
 }
 
+
+.modal.modal-lg .modal-container {
+    @include media('>tablet') {
+        max-width: 93.8vw;
+        max-height: 94vh;
+        height: 94vh;
+    }
+    transition: 1s ease;
+}
+
+
 aside{
     float: right;
     width:20%;
@@ -267,6 +278,9 @@ aside{
     border-left: 1px solid #e8e8e8;
     padding-left: 18px;
     margin-left: 18px;
+    li{
+        list-style-type: none;
+    }
     p{
         margin: 0px 0px 0.3rem 0px;
     }
@@ -286,7 +300,7 @@ aside{
 ///BACKOFFICE
 html, body{
     background: $color-lightblue;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .form-input:focus {
@@ -351,7 +365,7 @@ html, body{
 #adminPageContainer{
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 10vh;
+    margin-top: 4vw;
     overflow: auto;
     padding: 2%;
     h2 {
@@ -400,8 +414,19 @@ select{
 
 //form widths
 
+.w100{
+    width: 100%;
+    display: inline-block;
+    margin-top: 12px;
+}
 .w33{
     width: 23%;
+}
+
+.w8{
+    width: 48px;
+    display: inline-block;
+    padding-left: 18px;
 }
 
 //QILL
@@ -410,11 +435,12 @@ select{
 }
 
 .ql-toolbar.ql-snow + .ql-container.ql-snow {
-    max-height: 680px;
+    max-height: 480px;
 }
 
 .ql-toolbar.ql-snow {
     background-color: #f1f1f1;
+    margin-top: 12px;
 }
 
 .column {

@@ -70,30 +70,32 @@ if (isset($_SESSION['logged_in'])){
                 <i class="icon icon-arrow-right mr-1"></i>
                 Gérer les cases
             </label>
-            <div class="accordion-body">
-                <a href="editCase1.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 1</a>
-            </div>
-            <div class="accordion-body">
-                <a href="editCase2.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 2</a>
-            </div>
-            <div class="accordion-body">
-                <a href="editCase3.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 3</a>
-            </div>
-            <div class="accordion-body">
-                <a href="editCase4.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 4</a>
-            </div>
-            <div class="accordion-body">
-                <a href="editCase5.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 5</a>
-            </div>
-            <div class="accordion-body">
-                <a href="editCase6.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 6</a>
-            </div>
-            <div class="accordion-body">
-                <a href="editCase7.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 7</a>
-            </div>
-            <div class="accordion-body">
-                <a href="editCase8.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 8</a>
-            </div>
+                <div class="accordion-body">
+                    <a href="editCase1.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 1</a>
+                </div>
+                <div class="accordion-body">
+                    <a href="editCase2.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 2</a>
+                </div>
+                <div class="accordion-body">
+                    <a href="editCase3.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 3</a>
+                </div>
+                <div class="accordion-body">
+                    <a href="editCase4.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 4</a>
+                </div>
+
+                <div class="accordion-body">
+                    <a href="editCase5.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 5</a>
+                </div>
+                <div class="accordion-body">
+                    <a href="editCase6.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 6</a>
+                </div>
+                <div class="accordion-body">
+                    <a href="editCase7.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 7</a>
+                </div>
+                <div class="accordion-body">
+                    <a href="editCase8.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 8</a>
+                </div>
+
 
         </div>
 

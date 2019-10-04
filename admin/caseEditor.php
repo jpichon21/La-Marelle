@@ -49,7 +49,7 @@ if (isset($_SESSION['logged_in'])) {
             <?php } ?>
             
             <div class="container" id="contentContainer">
-            <h2>Modifier le contenu de la case <?php echo "$case_number" ?></h2>
+            <h2>Modifier le contenu de la case n°<?php echo "$case_number" ?></h2>
                 <div class="form-group column col-md-10 ">
                     <form action="editCase<?php echo "$case_number" ?>.php" method="post"  autocomplete="off" id="editForm">
                     <?php foreach ($cases as $case) { ?>
@@ -71,7 +71,9 @@ if (isset($_SESSION['logged_in'])) {
         <script>
             var toolbarOptions = [
                 [{ 'header': '2' }],
-                ['bold', 'italic', 'underline'],   
+                [ 'link' ],
+                ['bold', 'italic', 'underline'], 
+                [{ 'color': [] }, { 'background': [] }],        
                 [ 'video' ],
             ];
             var quill = new Quill('#editor', {

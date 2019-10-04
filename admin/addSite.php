@@ -48,7 +48,7 @@ if (isset($_SESSION['logged_in'])) {
                     <form action="addSite.php" method="post" autocomplete="on" id="editForm">
 
                         <label for="case">Case n°</label>
-                            <select class="form-input" name="case">
+                            <select class="form-input w8" name="case">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -57,10 +57,9 @@ if (isset($_SESSION['logged_in'])) {
                                 <option value="6">6</option>
                                 <option value="7">7</option>
                                 <option value="8">8</option>
-                                <option value="9">9</option>
                             </select>
 
-                        <label for="name">Nom du site</label>
+                        <label for="name" class="w100">Nom du site</label>
                         <input type="text" class="form-input" name="name" >
 
                         <label for="url">Lien du site</label>

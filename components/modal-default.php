@@ -13,6 +13,8 @@
         </div>
         <div class="modal-body">
             <div class="content">
+            <!--encart droit-->
+            <?php if (!empty($bibs) || !empty($sites) || !empty($fiches)) { ?>
                 <aside>
                     <h3>Ressources</h3>
                     <!--Bibliographie -->
@@ -35,8 +37,7 @@
                         <h4>Fiches pédagogiques</h4>
                         <?php foreach ($fiches as $fiche) { ?>
                         <li>
-                            <a href="docs/<?php echo $fiche['pdf_content'];?>"><i
-                                    class="far fa-file-pdf"></i><?php echo $fiche['pdf_content'];?></a>
+                            <a href="docs/<?php echo $fiche['pdf_content'];?>"><i class="far fa-file-pdf"></i> <?php echo $fiche['pdf_content'];?></a>
                         </li>
                         <?php } ?>
                     </div>
@@ -50,13 +51,14 @@
                         <h4>Sites</h4>
                         <?php foreach ($sites as $site) { ?>
                         <li>
-                            <a href="docs/<?php echo $site['site_url'];?>"><?php echo $site['site_url'];?></a>
+                            <a href="docs/<?php echo $site['site_url'];?>"><i class="fas fa-globe"></i> <?php echo $site['site_name'];?></a>
                         </li>
                         <?php } ?>
                     </div>
                     <?php } ?>
                     <!-- -->
                 </aside>
+            <?php } ?>
                 <!--contenu-->
                 <?php foreach ($cases as $case) { ?>
                 <p><?php echo $case['case_content']; ?></p>
