@@ -4,7 +4,8 @@
 // COLORS
 $color-lightblue: #e2eef1;
 $color-black: #5d5d5d;
-$color-bluegrey: #496A73;
+$color-bluegrey: #609bab;
+$color-ligherblue: #78b8ca;
 
 // VARIABLES 
 $leftmenu-width:  168px;
@@ -248,11 +249,19 @@ a, a:hover, a:active, a:visited {
 }
 .modal-body{
     padding: 0rem 0.8rem 1.2rem 0.8rem!important;
+    .ql-editor{
+        a{
+            color: $color-ligherblue;
+            text-decoration: underline;
+        }
+    }
 }
 
 .modal-container .modal-body {
+    @include media('>tablet') {
     width: 102%;
     padding-right: 2%!important;
+    }
 }
 
 .modal-title.h5{
@@ -283,8 +292,17 @@ aside{
     width: 20%;
     min-height: 1000px;
     border-left: 1px solid #e8e8e8;
-    padding-left: 18px;
+    padding-left: 36px;
     margin-left: 36px;
+    @include media('<=tablet') {
+        border-left: 0px;
+        min-height: 60px;
+        float: none;
+        padding: 0px!important;
+        margin-left: 0px;
+        width: 100%;
+        border-bottom: 1px solid #e8e8e8;
+    }
     li{
         list-style-type: none;
     }
@@ -440,6 +458,14 @@ select{
 .ql-video{
     width: 640px;
     height: 360px;
+    @include media('<=tablet') {
+        width: 420px;
+        height: 280px;
+    }
+    @include media('<=small') {
+        width: 280px;
+        height: 157px;
+    }
 }
 .ql-editor{
     outline: none;
