@@ -197,29 +197,29 @@
                         <circle class="cls-3" cx="333.89" cy="868.87" r="1.87" />
 
                         <a onclick="document.getElementById('beepSound').play();" href="#modal7">
-                          <rect class="cls-4" x="114.59" y="129.61" width="122.17" height="122.17" /><text class="cls-5"
+                          <rect class="cls-4" x="114.59" y="129.61" width="122.17" height="122.17" /><text class="cls-5 cls-4-5"
                             transform="translate(158.62 212.16)">7</text></a>
                         <a onclick="document.getElementById('beepSound').play();" href="#modal8">
-                          <rect class="cls-6" x="242.24" y="129.61" width="122.17" height="122.17" /><text class="cls-5"
+                          <rect class="cls-6" x="242.24" y="129.61" width="122.17" height="122.17" /><text class="cls-5 cls-6-5" 
                             transform="translate(284.7 212.16)">8</text></a>
                         <a onclick="document.getElementById('beepSound').play();" href="#modal4">
-                          <rect class="cls-7" x="111.85" y="383.35" width="122.17" height="122.17" /><text class="cls-5"
+                          <rect class="cls-7" x="111.85" y="383.35" width="122.17" height="122.17" /><text class="cls-5 cls-7-5"
                             transform="translate(150.52 468.83)">4</text></a>
                         <a onclick="document.getElementById('beepSound').play();" href="#modal3">
-                          <rect class="cls-8" x="175.55" y="510.22" width="122.17" height="122.17" /><text class="cls-5"
+                          <rect class="cls-8" x="175.55" y="510.22" width="122.17" height="122.17" /><text class="cls-5 cls-8-5"
                             transform="translate(213.41 593.67)">3</text></a>
                         <a onclick="document.getElementById('beepSound').play();" href="#modal2">
-                          <rect class="cls-9" x="175.55" y="637.09" width="122.17" height="122.17" /><text class="cls-5"
+                          <rect class="cls-9" x="175.55" y="637.09" width="122.17" height="122.17" /><text class="cls-5 cls-9-5"
                             transform="translate(216.52 721.01)">2</text></a>
                         <a onclick="document.getElementById('beepSound').play();" href="#modal1">
                           <rect class="cls-10" x="175.55" y="763.96" width="122.17" height="122.17" /><text
-                            class="cls-5" transform="translate(218.39 849.27)">1</text></a>
+                            class="cls-5 cls-10-5" transform="translate(218.39 849.27)">1</text></a>
                         <a onclick="document.getElementById('beepSound').play();" href="#modal5">
-                          <rect class="cls-11" x="239.5" y="383.35" width="122.17" height="122.17" /><text class="cls-5"
+                          <rect class="cls-11" x="239.5" y="383.35" width="122.17" height="122.17" /><text class="cls-5 cls-11-5"
                             transform="translate(280.66 468.83)">5</text></a>
                         <a onclick="document.getElementById('beepSound').play();" href="#modal6">
                           <rect class="cls-12" x="178.29" y="256.48" width="122.17" height="122.17" /><text
-                            class="cls-5" transform="translate(218.39 340.74)">6</text></a>
+                            class="cls-5 cls-12-5" transform="translate(218.39 340.74)">6</text></a>
 
                         <path class="cls-13"
                           d="M134,902.63h0c-4.34,6.37-12.42,4.2-12.42,4.2L113.89,884a13,13,0,0,1-.78-6.61,5.58,5.58,0,0,1,4.06-4.21c4.83-1.63,7.53,1.82,9.16,6.64Z" />

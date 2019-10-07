@@ -27,7 +27,7 @@
                         <p><?php echo $bib['bib_author'];?>. <i><?php echo $bib['bib_book'];?></i>
                             <?php echo $bib['bib_editor'];?>, <?php echo $bib['bib_year'];?>,
                             <?php echo $bib['bib_size'];?> p.</p>
-                        <a href="<?php echo $bib['bib_link'];?>"><?php echo $bib['bib_link'];?></a>
+                        <a href="https://<?php echo $bib['bib_link'];?>"><?php echo $bib['bib_link'];?></a>
                         <?php } ?>
                     </div>
                     <?php } ?>

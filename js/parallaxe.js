@@ -14,7 +14,7 @@ $(document).ready(function () {
   $('.parallaxe').mousemove(function (e) {
     if (is_moving == false) {
       var offset = ((e.pageX / screen_width - 0.5) * 2 * coef)
-      layer1.css({ 'background-position': (positionx + offset ) + 'px' })
+      layer1.css({ 'background-position': (positionx + offset) + 'px' })
       layer2.css({ 'background-position': (positionx + offset / 2) + '% 50%' })
       layer3.css({ 'background-position': (positionx + offset / 3) + 'px' })
     }

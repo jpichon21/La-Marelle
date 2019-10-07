@@ -56,14 +56,9 @@ a:hover, a:visited{
 
 
 // Containers
-
 body{
     zoom : 100%!important;
     background-color: $color-lightblue;
-    overflow: hidden;
-    @include media('<=small') {
-        overflow: auto;
-    }
 }
 
 footer{
@@ -241,6 +236,75 @@ a, a:hover, a:active, a:visited {
 
 
 // Modals
+.modal-dropdown{
+    position: absolute;
+    display: none;
+    font-family: 'Pequena', sans-serif;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: 232px;
+    .visible{
+        display: inline-block;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+}
+
+#modal1-dropdown{
+    bottom: 9vh;
+    right: 26vw;
+    color: #609babd0;
+}
+
+#modal2-dropdown{
+    bottom: 22vh;
+    right: 26vw;
+    color: #d5b3ff;
+}
+
+
+#modal3-dropdown{
+    bottom: 34vh;
+    right: 26vw;
+    color: #a5a8c4;
+}
+
+#modal4-dropdown{
+    bottom: 46vh;
+    left: 38vw;
+    color: #efc3a5;
+}
+
+#modal5-dropdown{
+    bottom: 46vh;
+    right: 23vw;
+    color: #bec999;
+}
+
+
+#modal6-dropdown{
+    bottom: 58vh;
+    right: 26vw;
+    color: #d8aaad;
+}
+
+
+#modal7-dropdown{
+    bottom: 70vh;
+    left: 38vw;
+    color: #a7cfcc;
+}
+
+
+#modal8-dropdown{
+    bottom: 70vh;
+    right: 23vw;
+    color: #9bc2a6;
+}
 
 .modal.modal-lg .modal-overlay {
     background: #e2eef194;
@@ -329,6 +393,9 @@ aside{
 html, body{
     background: $color-lightblue;
     overflow: hidden;
+    @include media('<=tablet') {
+        overflow: auto!important;
+    }
 }
 
 .form-input:focus {

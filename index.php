@@ -1,3 +1,11 @@
+<?php 
+include_once 'components/connection.php';
+include_once 'components/imports/allCase.php';
+
+$case = new AllContenu;
+$cases = $case->fetch_all();
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +31,58 @@
     $(document).ready(function () {
       $('.ql-editor').prop('contenteditable', false );
       $('.ql-clipboard').prop('contenteditable', false );
+      $('.cls-10, .cls-10-5').hover(function () {
+        $('#modal1-dropdown').addClass('visible');
+      });
+      $('.cls-10, .cls-10-5').mouseleave(function () {
+        $('#modal1-dropdown').removeClass('visible');
+      });
+      $('.cls-9, .cls-9-5').hover(function () {
+        $('#modal2-dropdown').addClass('visible');
+      });
+      $('.cls-9, .cls-9-5').mouseleave(function () {
+        $('#modal2-dropdown').removeClass('visible');
+      });
+      $('.cls-8, .cls-8-5').hover(function () {
+        $('#modal3-dropdown').addClass('visible');
+      });
+      $('.cls-8, .cls-8-5').mouseleave(function () {
+        $('#modal3-dropdown').removeClass('visible');
+      });
+      $('.cls-7, .cls-7-5').hover(function () {
+        $('#modal4-dropdown').addClass('visible');
+      });
+      $('.cls-7, .cls-7-5').mouseleave(function () {
+        $('#modal4-dropdown').removeClass('visible');
+      });
+      $('.cls-11, .cls-11-5').hover(function () {
+        $('#modal5-dropdown').addClass('visible');
+      });
+      $('.cls-11, .cls-11-5').mouseleave(function () {
+        $('#modal5-dropdown').removeClass('visible');
+      });
+      $('.cls-12, .cls-12-5').hover(function () {
+        $('#modal6-dropdown').addClass('visible');
+      });
+      $('.cls-12, .cls-12-5').mouseleave(function () {
+        $('#modal6-dropdown').removeClass('visible');
+      });
+      $('.cls-4, .cls-4-5').hover(function () {
+        $('#modal7-dropdown').addClass('visible');
+      });
+      $('.cls-4, .cls-4-5').mouseleave(function () {
+        $('#modal7-dropdown').removeClass('visible');
+      });
+      $('.cls-6, .cls-6-5').hover(function () {
+        $('#modal8-dropdown').addClass('visible');
+      });
+      $('.cls-6, .cls-6-5').mouseleave(function () {
+        $('#modal8-dropdown').removeClass('visible');
+      });
+  
+  
     });
+
   </script>
 </head>
 
@@ -46,35 +105,14 @@
                 <input onclick="document.getElementById('listSound').play();" type="checkbox" id="accordion-1"
                   name="accordion-checkbox" hidden>
                 <label class="accordion-header" for="accordion-1">
-                  Titre 1
+                  Mes Titres
                   <i class="icon icon-arrow-right mr-1"></i>
                 </label>
                 <div class="accordion-body">
                   <a href="#">Sous-titre</a>
                 </div>
               </div>
-              <div class="accordion">
-                <input onclick="document.getElementById('listSound').play();" type="checkbox" id="accordion-2"
-                  name="accordion-checkbox" hidden>
-                <label class="accordion-header" for="accordion-2">
-                  Titre 2
-                  <i class="icon icon-arrow-right mr-1"></i>
-                </label>
-                <div class="accordion-body">
-                  <a href="#">Sous-titre</a>
-                </div>
-              </div>
-              <div class="accordion">
-                <input onclick="document.getElementById('listSound').play();" type="checkbox" id="accordion-3"
-                  name="accordion-checkbox" hidden>
-                <label class="accordion-header" for="accordion-3">
-                  Titre 3
-                  <i class="icon icon-arrow-right mr-1"></i>
-                </label>
-                <div class="accordion-body">
-                  <a href="#">Sous-titre</a>
-                </div>
-              </div>
+            
             </div>
 
             <div id="menuMentions">
@@ -104,7 +142,35 @@
           <div id="layer2container">
             <div id="layer3container">
               <div id="gameContainer" class="parallaxe">
+            
                 <div id="marelleContainer">
+                <?php foreach ($cases as $case) { ?>
+                  <?php if ($case['case_number'] == 1) { ?>
+                  <span id="modal1-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <?php } ?>
+                  <?php if ($case['case_number'] == 2) { ?>
+                  <span id="modal2-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <?php } ?>
+                  <?php if ($case['case_number'] == 3) { ?>
+                  <span id="modal3-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <?php } ?>
+                  <?php if ($case['case_number'] == 4) { ?>
+                  <span id="modal4-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <?php } ?>
+                  <?php if ($case['case_number'] == 5) { ?>
+                  <span id="modal5-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <?php } ?>
+                  <?php if ($case['case_number'] == 6) { ?>
+                  <span id="modal6-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <?php } ?>
+                  <?php if ($case['case_number'] == 7) { ?>
+                  <span id="modal7-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <?php } ?>
+                  <?php if ($case['case_number'] == 8) { ?>
+                  <span id="modal8-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <?php } ?>
+                <?php } ?>
+            
                 <?php include 'components/marelle-svg.php';?>
                 </div>
               </div>
@@ -112,6 +178,8 @@
           </div>
         </div>
       </div>
+      
+
 
       <!--Modals-->
       <?php include 'components/modal1.php';?>
