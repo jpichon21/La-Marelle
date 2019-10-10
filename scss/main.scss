@@ -51,7 +51,8 @@ a:hover, a:visited{
 }
 
 .visible{
-    display: inline-block!important;
+    opacity: 1!important;
+    transition: 0.5s ease;
 }
 
 
@@ -238,71 +239,89 @@ a, a:hover, a:active, a:visited {
 // Modals
 .modal-dropdown{
     position: absolute;
-    display: none;
     font-family: 'Pequena', sans-serif;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    transition: 1s ease;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+#modal1-dropdown, #modal2-dropdown, #modal3-dropdown{
+    right: 26vw;
     width: 232px;
-    .visible{
-        display: inline-block;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
+    @include media('>laptop') {
+        right: 30vw;
+    }
+}
+
+#modal4-dropdown, #modal7-dropdown{
+    left: 38vw;
+    width: 102px;
+    @include media('>laptop') {
+        left: 40vw;
+    }
+}
+
+#modal6-dropdown{
+    left: 41vw;
+    width: 102px;
+    @include media('>laptop') {
+        left: 43vw;
+    }
+}
+
+#modal5-dropdown, #modal8-dropdown{
+    right: 23vw;
+    width: 232px;
+    @include media('>laptop') {
+        right: 27vw;
     }
 }
 
 #modal1-dropdown{
     bottom: 9vh;
-    right: 26vw;
     color: #609babd0;
 }
 
 #modal2-dropdown{
     bottom: 22vh;
-    right: 26vw;
     color: #d5b3ff;
 }
 
 
 #modal3-dropdown{
     bottom: 34vh;
-    right: 26vw;
     color: #a5a8c4;
 }
 
 #modal4-dropdown{
     bottom: 46vh;
-    left: 38vw;
     color: #efc3a5;
 }
 
 #modal5-dropdown{
     bottom: 46vh;
-    right: 23vw;
     color: #bec999;
 }
 
 
 #modal6-dropdown{
     bottom: 58vh;
-    right: 26vw;
     color: #d8aaad;
 }
 
 
 #modal7-dropdown{
     bottom: 70vh;
-    left: 38vw;
     color: #a7cfcc;
 }
 
 
 #modal8-dropdown{
     bottom: 70vh;
-    right: 23vw;
     color: #9bc2a6;
 }
 
@@ -563,3 +582,6 @@ select{
 .column {
     padding: 0px;
 }
+
+
+
