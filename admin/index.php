@@ -21,7 +21,7 @@ if (isset($_SESSION['logged_in'])){
     <?php include 'header.php'; ?>
 
     <div id="adminPageContainer">
-    <h1>Bienvenue sur l'interface de gestion de La Marelle </h1>
+    <h1>Bienvenue sur l'interface de gestion </h1>
 
     <h2>Gestion des ressources associées</h2>
         <div class="accordion">

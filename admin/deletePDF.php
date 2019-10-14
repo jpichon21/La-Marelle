@@ -9,13 +9,15 @@ if (isset($_SESSION['logged_in'])) {
 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
+        $target = $_GET['path'];
         $pdo->query('SET NAMES utf8');
         $query = $pdo->prepare('DELETE from pdfdocs WHERE pdf_id = ?');
         $query->bindValue(1, $id);
         $query->execute();
 
-        $success = "La fiche a été supprimée avec succès !";
+        unlink($target);
 
+        $success = "La fiche a été supprimée avec succès !";
 
     }
     //display delete page
@@ -57,6 +59,7 @@ if (isset($_SESSION['logged_in'])) {
                                 <option value="<?php echo $fiche['pdf_id']; ?>">
                                     <?php echo $fiche['pdf_content'] ?> - case n°<?php echo $fiche['pdf_case'] ?>
                                 </option>
+                                <input name="path" type="hidden" value="<?php echo $fiche['pdf_path']; ?>">
                             <?php } ?>
                         </select>
                     <input class="btn btn-primary input-group-btn" type="submit" value="Supprimer"/>

@@ -13,9 +13,10 @@ if (isset($_SESSION['logged_in'])) {
         if (empty($case) or empty($pdf)){
             $error = "Tous les champs sont requis !";
         } else {
-            $query = $pdo->prepare('INSERT INTO pdfdocs (pdf_content, pdf_case) VALUES (?, ?)');
+            $query = $pdo->prepare('INSERT INTO pdfdocs (pdf_content, pdf_case, pdf_path) VALUES (?, ?, ?)');
             $query->bindValue(1, $pdf);
             $query->bindValue(2, $case);
+            $query->bindValue(3, $target);
             $query->execute();
 
             if (move_uploaded_file($_FILES['pdf']['tmp_name'], $target)) {
