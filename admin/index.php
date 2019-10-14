@@ -148,7 +148,10 @@ if (isset($_SESSION['logged_in'])){
 
   
         <div class="container" id="loginContainer">
-        <h2>Se connecter</h2>
+        <div id="logoContainer">
+            <img src="../img/logos/logo-lab-noir.svg" width="64px" style="text-align : center;">
+        </div>
+        <h2>Interface de Gestion</h2>
         <?php if (isset($error)) { ?>
             <p style="color:#aa0000;" class="error-msg"><?php echo $error; ?></p>
         <?php } ?>

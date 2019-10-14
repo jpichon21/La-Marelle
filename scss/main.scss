@@ -86,7 +86,7 @@ footer{
     p{
         font-size: 0.6rem;
     }
-    @include media('>small') {
+    @include media('>tablet') {
         display: none;
     }
 }
@@ -99,7 +99,7 @@ a, a:hover, a:active, a:visited {
     position: relative;
     margin: 36px 56px;
     height: 92vh;
-    @include media('<=small') {
+    @include media('<=tablet') {
         margin: 0px;
     }
 }
@@ -112,7 +112,7 @@ a, a:hover, a:active, a:visited {
     @include media('<=xxlarge') {
         width: 208px;
     }
-    @include media('<=small') {
+    @include media('<=tablet') {
         float: none;
         display: inline-block;
         height: auto;
@@ -120,12 +120,12 @@ a, a:hover, a:active, a:visited {
         width: 100%;
     }
     #mainMenu{
-        @include media('<=small') {
+        @include media('<=tablet') {
             display: none;
         }
     }
     #menuList .accordion label {
-        @include media('<=small') {
+        @include media('<=tablet') {
             display: none;
         }
     }
@@ -133,14 +133,14 @@ a, a:hover, a:active, a:visited {
         img{
             outline:none;
         }
-        @include media('>small') {
+        @include media('>tablet') {
             display: none;
         }
     }
     #menuList{
         cursor: pointer;
         padding: 12px 0px;
-        @include media('<=small') {
+        @include media('<=tablet') {
                 margin: 0px;
         }
         
@@ -181,7 +181,7 @@ a, a:hover, a:active, a:visited {
             position: relative;
             //height: 84.6vh;
             height: 525px;
-            @include media('<=small') {
+            @include media('<=tablet') {
                 min-height: 425px;
             }
 
@@ -201,7 +201,7 @@ a, a:hover, a:active, a:visited {
         @include media('<xxlarge') {
             width: 179px;
         }
-        @include media('<=small') {
+        @include media('<=tablet') {
             display: none;
         }
         .textContent{
@@ -262,7 +262,7 @@ a, a:hover, a:active, a:visited {
         margin: 0 auto;
         width: 23.5%;
         height: 100%;
-        @include media('<=small') {
+        @include media('<=tablet') {
             width: 92%;
             text-align: center;
         }
@@ -270,7 +270,10 @@ a, a:hover, a:active, a:visited {
         margin-top: 4%;
         height:98%;
         padding-left: 16%;
-        @include media('<=small') {
+        @include media('<xs-laptop') {
+            padding-left: 35%;
+        }
+        @include media('<=tablet') {
             margin: 0 auto;
             margin-top: 4%;
             padding-left: 0px;
@@ -281,7 +284,7 @@ a, a:hover, a:active, a:visited {
 
 //mobile BG
 #gameContainer, #layer1container, #layer2container, #layer3container{
-    @include media('<=small') {
+    @include media('<xs-laptop') {
         background: none;
     }
 }
@@ -298,7 +301,7 @@ a, a:hover, a:active, a:visited {
     -ms-transition: opacity 0.5s ease;
     -o-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
-    @include media('<laptop') {
+    @include media('<xs-laptop') {
         display: none;
     }
 }
@@ -499,6 +502,10 @@ html, body{
         border-radius: 3px;
         border: 1px solid #e8e8e8;
         min-height: 400px;
+        #logoContainer{
+            text-align: center;
+            margin-bottom: 32px;
+        }
         .error-msg{
             text-align: center;
         }
@@ -512,6 +519,11 @@ html, body{
         }
         h2{
             text-align: center;
+            margin-bottom: 32px;
+        }
+        .return{
+            margin-top: 32px;
+            display: inline-block;
         }
     }
     #contentContainer{

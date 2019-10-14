@@ -82,12 +82,11 @@ $cases = $case->fetch_all();
         $('#modal8-dropdown').removeClass('visible');
       });
 
-      if (window.innerWidth <= 568) {
-        $('#menuToggle').on('click touch', function () {
-          console.log("test")
-          $('#mainMenu').toggleClass('displayed')
-        })
-      }
+  
+      $('#menuToggle').on('click touch', function () {
+        $('#mainMenu').toggleClass('displayed')
+      })
+
 
     });
   </script>
