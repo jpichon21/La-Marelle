@@ -30,9 +30,9 @@ $cases = $case->fetch_all();
 
   <script>
     $(document).ready(function () {
-      $('.ql-editor').prop('contenteditable', false );
-      $('.ql-clipboard').prop('contenteditable', false );
-      
+      $('.ql-editor').prop('contenteditable', false);
+      $('.ql-clipboard').prop('contenteditable', false);
+
       $('.cls-10, .cls-10-5').hover(function () {
         $('#modal1-dropdown').addClass('visible');
       });
@@ -81,10 +81,15 @@ $cases = $case->fetch_all();
       $('.cls-6, .cls-6-5').mouseleave(function () {
         $('#modal8-dropdown').removeClass('visible');
       });
-  
-  
-    });
 
+      if (window.innerWidth <= 568) {
+        $('#menuToggle').on('click touch', function () {
+          console.log("test")
+          $('#mainMenu').toggleClass('displayed')
+        })
+      }
+
+    });
   </script>
 </head>
 
@@ -107,36 +112,58 @@ $cases = $case->fetch_all();
                 <input onclick="document.getElementById('listSound').play();" type="checkbox" id="accordion-1"
                   name="accordion-checkbox" hidden>
                 <label class="accordion-header" for="accordion-1">
-                  Mes Titres
+                  Menu
                   <i class="icon icon-arrow-right mr-1"></i>
                 </label>
                 <div class="accordion-body">
-                  <a href="#">Sous-titre</a>
+                  <?php foreach ($cases as $case) { ?>
+                  <a href="#modal<?php echo $case['case_number']; ?>"><?php echo $case['case_title']; ?> </a>
+                  <?php } ?>
+                </div>
                 </div>
               </div>
-            
-            </div>
 
-            <div id="menuMentions">
-              <div class="textContent">
-                <h3>La marelle : lamarelle-voix.fr</h3>
-                <p>Créé dans le cadre du Pôle de Ressources pour l’Education Artistique et Culturelle (PREAC Musique et
-                  voix de Bourgogne) avec l’aide de financements de la DRAC Bourgogne Franche-Comté, du réseau Canopé et
-                  du Conseil régional de Bourgogne Franche-Comté, ce site a pour objectif de faciliter la création et
-                  l’animation de chœurs d’enfants et de jeunes. </p>
-                <p>Vous y trouverez des vidéos, des fiches pédagogiques, des sites de références, des bibliographies…
-                  sur tous les sujets utiles à la direction d’un chœur d’enfants ou de jeunes : la voix de l’enfant, les
-                  jeux vocaux, les répertoires, les aides et dispositifs.</p>
-                <p>Interactif et ludique, vous pourrez parcourir la marelle en fonction de vos envies et y revenir
-                  chaque fois que de besoin. </p>
-              </div>
-              <div class="logosContent">
-                <img src="img/logo_region.svg" width="64px">
-                <img src="img/logo_ministere_culture_noir.png" width="64px">
+              <div id="menuMentions">
+                <div class="textContent">
+                  <h3>La marelle : lamarelle-voix.fr</h3>
+                  <p>Créé dans le cadre du Pôle de Ressources pour l’Education Artistique et Culturelle (PREAC Musique
+                    et
+                    voix de Bourgogne) avec l’aide de financements de la DRAC Bourgogne Franche-Comté, du réseau Canopé
+                    et
+                    du Conseil régional de Bourgogne Franche-Comté, ce site a pour objectif de faciliter la création et
+                    l’animation de chœurs d’enfants et de jeunes. </p>
+                  <div id="toggle">
+                    <a href="#modalMentions" id="#modalMentionsToggle">en savoir plus +</a>
+                  </div>
+                </div>
+
+                <div class="logosContent">
+                  <div>
+                    <img src="img/logos/logo-lab-noir.svg" width="32px">
+                    <img src="img/logos/logo_ministere_culture_noir.png" width="52px">
+                    <img src="img/logos/region.svg" width="42px">
+                  </div>
+
+                  <div>
+                    <img src="img/logos/menj.jpg" width="82px">
+                    <img src="img/logos/mgen.png" width="54px">
+                  </div>
+
+                  <div>
+                    <img src="img/logos/carasso.png" width="54px">
+                    <img src="img/logos/canope.png" width="62px">
+                  </div>
+
+                  <div>
+                    <img src="img/logos/cdlv.png" width="126px">
+                  </div>
+                </div>
+                
               </div>
             </div>
-          </div>
         </nav>
+
+
 
       </div>
       <div id="backgroundContainer">
@@ -144,46 +171,64 @@ $cases = $case->fetch_all();
           <div id="layer2container">
             <div id="layer3container">
               <div id="gameContainer" class="parallaxe">
-            
+
                 <div id="marelleContainer">
-                <?php foreach ($cases as $case) { ?>
+                  <?php foreach ($cases as $case) { ?>
                   <?php if ($case['case_number'] == 1) { ?>
-                  <span id="modal1-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <span id="modal1-dropdown" class="modal-dropdown">
+                    <h2><?php echo $case['case_title']; ?></h2>
+                  </span>
                   <?php } ?>
                   <?php if ($case['case_number'] == 2) { ?>
-                  <span id="modal2-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <span id="modal2-dropdown" class="modal-dropdown">
+                    <h2><?php echo $case['case_title']; ?></h2>
+                  </span>
                   <?php } ?>
                   <?php if ($case['case_number'] == 3) { ?>
-                  <span id="modal3-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <span id="modal3-dropdown" class="modal-dropdown">
+                    <h2><?php echo $case['case_title']; ?></h2>
+                  </span>
                   <?php } ?>
                   <?php if ($case['case_number'] == 4) { ?>
-                  <span id="modal4-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <span id="modal4-dropdown" class="modal-dropdown">
+                    <h2><?php echo $case['case_title']; ?></h2>
+                  </span>
                   <?php } ?>
                   <?php if ($case['case_number'] == 5) { ?>
-                  <span id="modal5-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <span id="modal5-dropdown" class="modal-dropdown">
+                    <h2><?php echo $case['case_title']; ?></h2>
+                  </span>
                   <?php } ?>
                   <?php if ($case['case_number'] == 6) { ?>
-                  <span id="modal6-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <span id="modal6-dropdown" class="modal-dropdown">
+                    <h2><?php echo $case['case_title']; ?></h2>
+                  </span>
                   <?php } ?>
                   <?php if ($case['case_number'] == 7) { ?>
-                  <span id="modal7-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <span id="modal7-dropdown" class="modal-dropdown">
+                    <h2><?php echo $case['case_title']; ?></h2>
+                  </span>
                   <?php } ?>
                   <?php if ($case['case_number'] == 8) { ?>
-                  <span id="modal8-dropdown" class="modal-dropdown"><h2><?php echo $case['case_title']; ?></h2></span>
+                  <span id="modal8-dropdown" class="modal-dropdown">
+                    <h2><?php echo $case['case_title']; ?></h2>
+                  </span>
                   <?php } ?>
-                <?php } ?>
-            
-                <?php include 'components/marelle-svg.php';?>
+                  <?php } ?>
+
+                  <?php include 'components/marelle-svg.php';?>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
+
 
 
       <!--Modals-->
+      <?php include 'components/modal-mentions.php';?>
       <?php include 'components/modal1.php';?>
       <?php include 'components/modal2.php';?>
       <?php include 'components/modal3.php';?>
@@ -206,26 +251,39 @@ $cases = $case->fetch_all();
         <source src="sounds/zipsound-b.wav" type="audio/wav">
       </audio>
 
-  <footer>
-    <div id="mobileMentions">
-      <div class="textContent">
-        <h3>La marelle : lamarelle-voix.fr</h3>
-        <p>Créé dans le cadre du Pôle de Ressources pour l’Education Artistique et Culturelle (PREAC Musique et voix de
-          Bourgogne) avec l’aide de financements de la DRAC Bourgogne Franche-Comté, du réseau Canopé et du Conseil
-          régional de Bourgogne Franche-Comté, ce site a pour objectif de faciliter la création et l’animation de chœurs
-          d’enfants et de jeunes. </p>
-        <p>Vous y trouverez des vidéos, des fiches pédagogiques, des sites de références, des bibliographies… sur tous
-          les sujets utiles à la direction d’un chœur d’enfants ou de jeunes : la voix de l’enfant, les jeux vocaux, les
-          répertoires, les aides et dispositifs.</p>
-        <p>Interactif et ludique, vous pourrez parcourir la marelle en fonction de vos envies et y revenir chaque fois
-          que de besoin. </p>
-      </div>
-      <div class="logosContent">
-        <img src="img/logo_region.svg" width="64px">
-        <img src="img/logo_ministere_culture_noir.png" width="64px">
-      </div>
-    </div>
-  </footer>
+      <footer>
+        <div id="mobileMentions">
+          <div class="textContent">
+            <h3>La marelle : lamarelle-voix.fr</h3>
+            <p>Créé dans le cadre du Pôle de Ressources pour l’Education Artistique et Culturelle (PREAC Musique et voix
+              de
+              Bourgogne) avec l’aide de financements de la DRAC Bourgogne Franche-Comté, du réseau Canopé et du Conseil
+              régional de Bourgogne Franche-Comté, ce site a pour objectif de faciliter la création et l’animation de
+              chœurs
+              d’enfants et de jeunes. </p>
+            <p>Vous y trouverez des vidéos, des fiches pédagogiques, des sites de références, des bibliographies… sur
+              tous
+              les sujets utiles à la direction d’un chœur d’enfants ou de jeunes : la voix de l’enfant, les jeux vocaux,
+              les
+              répertoires, les aides et dispositifs.</p>
+            <p>Interactif et ludique, vous pourrez parcourir la marelle en fonction de vos envies et y revenir chaque
+              fois
+              que de besoin. </p>
+          </div>
+          <div class="logosContent">
+                  <div>
+                    <img src="img/logos/logo-lab-noir.svg" width="32px">
+                    <img src="img/logos/logo_ministere_culture_noir.png" width="52px">
+                    <img src="img/logos/region.svg" width="42px">
+                    <img src="img/logos/menj.jpg" width="82px">
+                    <img src="img/logos/mgen.png" width="54px">
+                    <img src="img/logos/carasso.png" width="54px">
+                    <img src="img/logos/canope.png" width="62px">
+                    <img src="img/logos/cdlv.png" width="126px">
+                  </div>
+                </div>
+        </div>
+      </footer>
 
 </body>
 
