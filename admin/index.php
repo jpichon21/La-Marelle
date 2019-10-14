@@ -21,8 +21,12 @@ if (isset($_SESSION['logged_in'])){
     <?php include 'header.php'; ?>
 
     <div id="adminPageContainer">
-    <h1>Bienvenue sur l'interface de gestion </h1>
+    <div id="logoContainer">
+            <img src="../img/logos/logo-lab-noir.svg" width="64px" style="text-align : center;">
+        </div>
+    <h1>Bienvenue sur l'Interface de Gestion </h1>
 
+    <div class="leftContainer">
     <h2>Gestion des ressources associées</h2>
         <div class="accordion">
         <input type="checkbox" id="accordion-0" name="accordion-checkbox" hidden>
@@ -65,7 +69,10 @@ if (isset($_SESSION['logged_in'])){
                 <a href="deleteSite.php"><i class="icon icon-delete"></i>Supprimer un site ressource</a>
             </div>
         </div>
+    </div>
 
+
+    <div class="rightContainer">
         <h2>Gestion des contenus éditoriaux</h2>
         <div class="accordion">
         <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>
@@ -98,11 +105,11 @@ if (isset($_SESSION['logged_in'])){
                 <div class="accordion-body">
                     <a href="editCase8.php"><i class="icon icon-edit"></i>Modifier le contenu de la case 8</a>
                 </div>
-
-
         </div>
+    </div>
 
     </div>
+
     <body>
 <?php
 } else {
