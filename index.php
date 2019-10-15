@@ -12,6 +12,12 @@ $cases = $case->fetch_all();
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name="description" content="Créé dans le cadre du Pôle de Ressources pour l’Education Artistique et Culturelle (PREAC Musique et voix de Bourgogne) avec l’aide de financements de la DRAC Bourgogne Franche-Comté, du réseau Canopé et du Conseil régional de Bourgogne Franche-Comté, ce site a pour objectif de faciliter la création et l’animation de chœurs d’enfants et de jeunes." />
+  <meta property="og:url"                content="https://lamarelle-voix.fr" />
+  <meta property="og:type"               content="website" />
+  <meta property="og:title"              content="La Marelle Voix" />
+  <meta property="og:description"        content="Créé dans le cadre du Pôle de Ressources pour l’Education Artistique et Culturelle (PREAC Musique et voix de Bourgogne) avec l’aide de financements de la DRAC Bourgogne Franche-Comté, du réseau Canopé et du Conseil régional de Bourgogne Franche-Comté, ce site a pour objectif de faciliter la création et l’animation de chœurs d’enfants et de jeunes." />
+  <meta property="og:image"              content="https://lamarelle-voix.fr/img/og_image.png" />
   <title>La Marelle</title>
 
   <meta name='viewport' content='width=device-width, initial-scale=1'>
