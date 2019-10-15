@@ -14,6 +14,7 @@ if (isset($_SESSION['logged_in'])) {
         if (empty($name) or empty($url)){
             $error = "Tous les champs sont requis !";
         } else {
+            $pdo->query('SET NAMES utf8');
             $query = $pdo->prepare('INSERT INTO sites (site_name, site_url, site_case) VALUES (?, ?, ?)');
             $query->bindValue(1, $name);
             $query->bindValue(2, $url);

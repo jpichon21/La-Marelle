@@ -18,6 +18,7 @@ if (isset($_SESSION['logged_in'])) {
         if (empty($book) or empty($author)){
             $error = "Tous les champs sont requis !";
         } else {
+            $pdo->query('SET NAMES utf8');
             $query = $pdo->prepare('INSERT INTO bibliographies (bib_book, bib_author, bib_editor, bib_year, bib_size, bib_link, bib_case) VALUES (?, ?, ?, ?, ?, ?, ?)');
             $query->bindValue(1, $book);
             $query->bindValue(2, $author);
