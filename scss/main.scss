@@ -295,7 +295,7 @@ a, a:hover, a:active, a:visited {
     position: absolute;
     font-family: 'Pequena', sans-serif;
     transition: 1s ease;
-    opacity: 0;
+    opacity: 1;
     -webkit-transition: opacity 0.5s ease;
     -moz-transition: opacity 0.5s ease;
     -ms-transition: opacity 0.5s ease;
@@ -315,7 +315,7 @@ a, a:hover, a:active, a:visited {
 }
 
 #modal4-dropdown, #modal7-dropdown{
-    left: 38vw;
+    left: 40vw;
     width: 102px;
     @include media('>laptop') {
         left: 40.5vw;
@@ -323,7 +323,7 @@ a, a:hover, a:active, a:visited {
 }
 
 #modal6-dropdown{
-    left: 41vw;
+    left: 43vw;
     width: 102px;
     @include media('>laptop') {
         left: 43vw;
@@ -341,45 +341,69 @@ a, a:hover, a:active, a:visited {
 #modal1-dropdown{
     bottom: 9vh;
     color: #609babd0;
+    @include media('>laptop') {
+        bottom: 10.5vh;
+    }
 }
 
 #modal2-dropdown{
     bottom: 22vh;
     color: #d5b3ff;
+    @include media('>laptop') {
+        bottom: 23vh;
+    }
 }
 
 
 #modal3-dropdown{
     bottom: 34vh;
     color: #a5a8c4;
+    @include media('>laptop') {
+        bottom: 35vh;
+    }
 }
 
 #modal4-dropdown{
     bottom: 46vh;
     color: #efc3a5;
+    @include media('>laptop') {
+        bottom: 46.5vh;
+    }
 }
 
 #modal5-dropdown{
     bottom: 46vh;
     color: #bec999;
+    @include media('>laptop') {
+        bottom: 46.5vh;
+    }
 }
 
 
 #modal6-dropdown{
     bottom: 58vh;
     color: #d8aaad;
+    @include media('>laptop') {
+        bottom: 58.5vh;
+    }
 }
 
 
 #modal7-dropdown{
     bottom: 70vh;
     color: #a7cfcc;
+    @include media('>laptop') {
+        bottom: 70.5vh;
+    }
 }
 
 
 #modal8-dropdown{
     bottom: 70vh;
     color: #9bc2a6;
+    @include media('>laptop') {
+        bottom: 70.5vh;
+    }
 }
 
 .modal.modal-lg .modal-overlay {
@@ -674,7 +698,10 @@ select{
 }
 
 .ql-toolbar.ql-snow + .ql-container.ql-snow {
-    max-height: 480px;
+    max-height: 532px;
+    @include media('>laptop') {
+        max-height: 71vh;
+    }
 }
 
 .ql-toolbar.ql-snow {

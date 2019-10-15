@@ -52,7 +52,7 @@ if (isset($_SESSION['logged_in'])) {
                     <form action="addPDF.php" method="post"  enctype="multipart/form-data">
                         <input type="hidden" name="size" value="1000000">
 
-                        <label for="case">Case n°</label>
+                        <label for="case" class="w100">Case n°</label>
                         <select class="form-input w8" name="case">
                             <option value="1">1</option>
                             <option value="2">2</option>

@@ -116,7 +116,7 @@ $cases = $case->fetch_all();
                 </label>
                 <div class="accordion-body">
                   <?php foreach ($cases as $case) { ?>
-                  <a href="#modal<?php echo $case['case_number']; ?>"><?php echo $case['case_title']; ?> </a>
+                  <a onclick="document.getElementById('beepSound').play();" href="#modal<?php echo $case['case_number']; ?>"><?php echo $case['case_title']; ?> </a>
                   <?php } ?>
                 </div>
                 </div>

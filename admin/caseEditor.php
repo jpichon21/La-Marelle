@@ -56,9 +56,9 @@ if (isset($_SESSION['logged_in'])) {
                 <div class="form-group column col-md-10 ">
                     <form action="editCase<?php echo "$case_number" ?>.php" method="post"  autocomplete="off" id="editForm">
                     <?php foreach ($cases as $case) { ?>
-                        <label for="title">Titre de la case</label>
+       
                         <input type="text" class="form-input" name="title" value="<?php echo $case['case_title']; ?>">
-                        <label for="content">Contenu de la case</label>
+              
                         <div class="form-input" id="editor">
                             <?php echo $case['case_content']; ?>
                         </div>
