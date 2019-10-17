@@ -26,7 +26,7 @@ if (isset($_SESSION['logged_in'])) {
         }
     }
 ?>
-    <html>
+    <html id="admin">
         <head>
             <title>La Marelle Voix | Interface Gestion</title>
             <meta charset='utf-8'>
@@ -41,7 +41,7 @@ if (isset($_SESSION['logged_in'])) {
             <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
             <script src="../js/jquery-3.4.1.min.js"></script>
         </head>
-        <body>
+        <body id="adminBody">
 
         <?php include 'header.php'; ?>
 

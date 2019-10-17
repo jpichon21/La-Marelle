@@ -510,6 +510,7 @@ aside{
         display: inline;
     }
     h4{
+        font-weight: 700;
         margin-top: 32px;
         @include media('<=tablet') {
             margin-top: 0px;
@@ -530,6 +531,9 @@ aside{
 
 
 ///BACKOFFICE
+#admin{
+    overflow: auto!important;
+}
 html, body{
     background: $color-lightblue;
     overflow: hidden;
@@ -586,8 +590,8 @@ html, body{
         padding: 40px;
         border-radius: 0px;
         background-color: white;
-        height: 980vh;
-
+        height: auto;
+        min-height: 768px;
         input{
             margin: 12px 0px;
         }

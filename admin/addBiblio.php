@@ -87,7 +87,7 @@ if (isset($_SESSION['logged_in'])) {
                         <label for="pages">Nombre de pages</label>
                         <input type="text" class="form-input w33" name="pages" maxlength="4">
 
-                        <label for="link">Lien externe</label>
+                        <label for="link">Lien externe <i>(format www.monsite.com)</i></label>
                         <input type="text" class="form-input" name="link">
 
                     

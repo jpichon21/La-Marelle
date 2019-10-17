@@ -5,7 +5,7 @@ include_once '../components/connection.php';
 if (isset($_SESSION['logged_in'])){
 // display index
 ?>
-    <html>
+    <html id="admin">
     <head>
         <title>La Marelle Voix | Interface Gestion</title>
         <meta charset='utf-8'>
@@ -16,7 +16,7 @@ if (isset($_SESSION['logged_in'])){
         <link rel="stylesheet" href="../css/spectre-icons.min.css"/>
         <link rel="stylesheet" href="../css/main.css"/>
     <head>
-    <body>
+    <body id="adminBody">
 
     <?php include 'header.php'; ?>
 
