@@ -284,8 +284,14 @@ a, a:hover, a:active, a:visited {
 }
 
 //mobile BG
-#gameContainer, #layer1container, #layer2container, #layer3container{
+#gameContainer{
     @include media('<xs-laptop') {
+        background-position-y: 45px;
+        background-position-x: 45px;
+    }
+}
+#gameContainer, #layer1container, #layer2container, #layer3container{
+    @include media('<xxs-laptop') {
         background: none;
     }
 }
@@ -302,7 +308,7 @@ a, a:hover, a:active, a:visited {
     -ms-transition: opacity 0.5s ease;
     -o-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
-    @include media('<xs-laptop') {
+    @include media('<xxs-laptop') {
         display: none;
     }
 }
@@ -310,6 +316,9 @@ a, a:hover, a:active, a:visited {
 #modal1-dropdown, #modal2-dropdown, #modal3-dropdown{
     right: 26vw;
     width: 232px;
+    @include media('<xs-laptop') {
+        right: 17vw;
+    }
     @include media('>laptop') {
         right: 30vw;
     }
@@ -318,6 +327,9 @@ a, a:hover, a:active, a:visited {
 #modal4-dropdown, #modal7-dropdown{
     left: 40vw;
     width: 102px;
+    @include media('<xs-laptop') {
+        right: 29.5vw;
+    }
     @include media('>laptop') {
         left: 40.5vw;
     }
@@ -326,6 +338,9 @@ a, a:hover, a:active, a:visited {
 #modal6-dropdown{
     left: 43vw;
     width: 102px;
+    @include media('<xs-laptop') {
+        right: 32vw;
+    }
     @include media('>laptop') {
         left: 43vw;
     }
@@ -334,6 +349,9 @@ a, a:hover, a:active, a:visited {
 #modal5-dropdown, #modal8-dropdown{
     right: 23vw;
     width: 232px;
+    @include media('<xs-laptop') {
+        right: 14vw;
+    }
     @include media('>laptop') {
         right: 27vw;
     }
