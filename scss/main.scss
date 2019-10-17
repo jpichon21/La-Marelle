@@ -317,7 +317,7 @@ a, a:hover, a:active, a:visited {
     right: 26vw;
     width: 232px;
     @include media('<xs-laptop') {
-        right: 17vw;
+        right: 18vw;
     }
     @include media('>laptop') {
         right: 30vw;
@@ -328,7 +328,7 @@ a, a:hover, a:active, a:visited {
     left: 40vw;
     width: 102px;
     @include media('<xs-laptop') {
-        right: 29.5vw;
+        left: 42.5vw;
     }
     @include media('>laptop') {
         left: 40.5vw;
@@ -339,7 +339,7 @@ a, a:hover, a:active, a:visited {
     left: 43vw;
     width: 102px;
     @include media('<xs-laptop') {
-        right: 32vw;
+        left: 46.5vw
     }
     @include media('>laptop') {
         left: 43vw;
@@ -350,7 +350,7 @@ a, a:hover, a:active, a:visited {
     right: 23vw;
     width: 232px;
     @include media('<xs-laptop') {
-        right: 14vw;
+        right: 15vw;
     }
     @include media('>laptop') {
         right: 27vw;
@@ -482,7 +482,7 @@ aside{
     margin-left: 36px;
     .bibContainer{
         p{
-            margin-bottom: 0px;
+            margin-bottom: 0px!important;
         }
     }
     @include media('<=tablet') {
