@@ -18,16 +18,18 @@
             <!--encart droit-->
             <?php if (!empty($bibs) || !empty($sites) || !empty($fiches)) { ?>
                 <aside>
-                    <h3>Ressources Associées</h3>
+                    <h3>Ressources associées</h3>
                     <!--Bibliographie -->
                     <?php if (!empty($bibs)) { ?>
                     <div>
-                        <h4>Bibliographie</h4>
+                        <h4><i class="fas fa-book"></i> Bibliographie</h4>
                         <?php foreach ($bibs as $bib) { ?>
-                        <p><?php echo $bib['bib_author'];?>. <i><?php echo $bib['bib_book'];?></i>
-                            <?php echo $bib['bib_editor'];?>, <?php echo $bib['bib_year'];?>,
-                            <?php echo $bib['bib_size'];?> p.</p>
-                        <a href="https://<?php echo $bib['bib_link'];?>"><?php echo $bib['bib_link'];?></a>
+                        <div class="bibContainer">
+                            <p><?php echo $bib['bib_author'];?>. <i><?php echo $bib['bib_book'];?></i>
+                                <?php echo $bib['bib_editor'];?>, <?php echo $bib['bib_year'];?>,
+                                <?php echo $bib['bib_size'];?> p.</p>
+                            <a href="https://<?php echo $bib['bib_link'];?>"><?php echo $bib['bib_link'];?></a>
+                        </div>
                         <?php } ?>
                     </div>
                     <?php } ?>
@@ -36,12 +38,14 @@
                     <!--Fiches pédagogiques -->
                     <?php if (!empty($fiches)) { ?>
                     <div>
-                        <h4>Fiches pédagogiques</h4>
+                        <h4><i class="fas fa-file-alt"></i> Fiches pédagogiques</h4>
+                        <div class="ficheContainer">
                         <?php foreach ($fiches as $fiche) { ?>
-                        <li>
-                            <a href="docs/<?php echo $fiche['pdf_content'];?>"><i class="far fa-file-pdf"></i> <?php echo $fiche['pdf_content'];?></a>
-                        </li>
+                            <li>
+                                <a href="docs/<?php echo $fiche['pdf_content'];?>"><i class="far fa-file-pdf"></i> <?php echo $fiche['pdf_content'];?></a>
+                            </li>
                         <?php } ?>
+                        </div>
                     </div>
                     <?php } ?>
                     <!-- -->
@@ -50,12 +54,14 @@
                     <!--Sites ressources -->
                     <?php if (!empty($sites)) { ?>
                     <div>
-                        <h4>Sites</h4>
+                        <h4><i class="fas fa-globe-europe"></i> Sites</h4>
+                        <div class="ficheContainer">
                         <?php foreach ($sites as $site) { ?>
                         <li>
                             <a href="https://<?php echo $site['site_url'];?>"><i class="fas fa-globe"></i> <?php echo $site['site_name'];?></a>
                         </li>
                         <?php } ?>
+                        </div>
                     </div>
                     <?php } ?>
                     <!-- -->
