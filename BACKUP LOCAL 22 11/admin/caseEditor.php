@@ -62,7 +62,7 @@ if (isset($_SESSION['logged_in'])) {
                         <div class="form-input" id="editor">
                             <?php echo $case['case_content']; ?>
                         </div>
-                        <textarea class="form-input" name="content" style="display:none" id="hiddenArea" value="<?php echo $case['case_content']; ?>"></textarea>
+                        <textarea class="form-input" name="content" style="display:none" id="hiddenArea" value=""></textarea>
                     <?php } ?>
                         <input class="btn btn-primary input-group-btn" type="submit" value="Modifier" id="sendBtn"/>
                         <a href="index.php" class="return">🡐 Retour</a>

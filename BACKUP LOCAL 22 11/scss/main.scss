@@ -481,6 +481,13 @@ aside{
     padding-left: 36px;
     margin-left: 36px;
     .bibContainer{
+        border-bottom: 1px solid #e8e8e8;
+        padding-bottom: 18px;
+        max-width: 200px;
+        @include media('<=tablet') {
+            max-width: 100%;
+            border-bottom: 1px solid #f3f3f3;
+        }
         p{
             margin-bottom: 0px!important;
         }

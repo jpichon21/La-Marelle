@@ -144,23 +144,24 @@ $cases = $case->fetch_all();
 
                 <div class="logosContent">
                   <div>
-                    <img src="img/logos/logo-lab-noir.svg" width="32px">
-                    <img src="img/logos/logo_ministere_culture_noir.png" width="52px">
-                    <img src="img/logos/region.svg" width="42px">
-                  </div>
-
-                  <div>
-                    <img src="img/logos/menj.jpg" width="82px">
-                    <img src="img/logos/mgen.png" width="54px">
-                  </div>
-
-                  <div>
-                    <img src="img/logos/carasso.png" width="54px">
-                    <img src="img/logos/canope.png" width="62px">
+                    <img src="img/logos/logo_ministere_culture_noir.png" width="64px"> 
+                    <img src="img/logos/region.svg" width="52px">
+                    <img src="img/logos/logo-lab-noir.svg" width="36px">
                   </div>
 
                   <div>
                     <img src="img/logos/cdlv.png" width="126px">
+                    <img src="img/logos/Logo_89_Yonne.png" width="32px">
+                  </div>
+
+                  <div>
+                    <img src="img/logos/canope.png" width="92px">
+                    <img src="img/logos/carasso.png" width="54px">
+                  </div>
+
+                  <div>
+                    <img src="img/logos/menj.jpg" width="82px">
+                    <img src="img/logos/mgen.png" width="36px">
                   </div>
                 </div>
                 
@@ -277,14 +278,15 @@ $cases = $case->fetch_all();
           </div>
           <div class="logosContent">
                   <div>
-                    <img src="img/logos/logo-lab-noir.svg" width="32px">
-                    <img src="img/logos/logo_ministere_culture_noir.png" width="52px">
-                    <img src="img/logos/region.svg" width="42px">
-                    <img src="img/logos/menj.jpg" width="82px">
-                    <img src="img/logos/mgen.png" width="54px">
-                    <img src="img/logos/carasso.png" width="54px">
-                    <img src="img/logos/canope.png" width="62px">
+                    <img src="img/logos/logo_ministere_culture_noir.png" width="64px"> 
+                    <img src="img/logos/region.svg" width="52px">
+                    <img src="img/logos/logo-lab-noir.svg" width="36px">
                     <img src="img/logos/cdlv.png" width="126px">
+                    <img src="img/logos/Logo_89_Yonne.png" width="32px">
+                    <img src="img/logos/canope.png" width="92px">
+                    <img src="img/logos/carasso.png" width="54px">
+                    <img src="img/logos/menj.jpg" width="82px">
+                    <img src="img/logos/mgen.png" width="36px">
                   </div>
                 </div>
         </div>
